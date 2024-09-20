@@ -1,0 +1,44 @@
+### Create a Book
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+        "code": "NRN-7",
+        "title": "The Lion, the Witch and the Wardrobe",
+        "author": "C.S. Lewis",
+        "stock": 1
+}
+
+### Show Books
+GET http://localhost:3000/books
+
+### Create a Member
+POST http://localhost:3000/members
+Content-Type: application/json
+
+{
+"code" :"M003",
+"name":"Putri"
+}
+
+### Show Members
+GET http://localhost:3000/members
+
+### Borrow a book
+POST http://localhost:3000/borrows
+Content-Type: application/json
+
+{
+  "memberId":3,
+  "bookId":2
+}
+
+### Show Borrowed Books
+GET http://localhost:3000/borrows
+
+### Check Status Member
+GET http://localhost:3000/borrows/status
+
+### Return a book
+PUT http://localhost:3000/borrows/1/return
+
